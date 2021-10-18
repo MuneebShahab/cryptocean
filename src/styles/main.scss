@@ -1,0 +1,20 @@
+@import './globals.scss';
+@import './resets.scss';
+
+// Components
+
+@import './components/navigation.scss';
+@import './components/footer.scss';
+@import './components/buttons.scss';
+@import './components/heading-primary.scss';
+
+// Pages
+
+@import './pages/header.scss';
+@import './pages/mintbox.scss';
+@import './pages/about.scss';
+@import './pages/donation.scss';
+@import './pages/team.scss';
+@import './pages/play.scss';
+@import './pages/sailmap.scss';
+@import './pages/faq.scss';

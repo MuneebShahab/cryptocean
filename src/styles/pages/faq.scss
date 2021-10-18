@@ -1,0 +1,116 @@
+.faq {
+
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+  &-wrapper {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    place-items: center;
+    padding: 5em;
+
+    &-item {
+      width: 100%;
+      height: 50em;
+      overflow-y: scroll;
+      margin: 1em 0;
+    }
+  }
+
+
+  &-position-absolute {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  img.faq-icon {
+    margin-left: 0.3em;
+  }
+
+  &-item {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    border: 1px solid $color-neon;
+    border-radius: $border-radius;
+    background: rgba($color-neon, 0.2);
+
+    padding: 1.2em;
+    margin: 1.4em 0em;
+
+    &:hover+.faq-item-description {
+      display: block;
+    }
+
+    &-text {
+      color: $color-white;
+      font-size: 1.8em;
+      line-height: 2em;
+      text-shadow: 0px 10px 60px rgba(255, 255, 255, 0.8);
+
+      border-left: 2px solid $color-neon;
+      padding-left: 1em;
+    }
+
+    &-description {
+      font-size: 1.6em;
+      line-height: 2em;
+      color: $color-black;
+      background-color: $color-white;
+      border: 1px solid $color-neon;
+      border-radius: $border-radius;
+      padding: 2em;
+      display: none;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      right: 2%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@keyframes open {
+  0% {
+    display: 0;
+  }
+
+  100% {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .faq {
+    font-size: 7px;
+
+    &-wrapper {
+      width: 90%;
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 425px) {
+  .faq {
+    margin-top: 150px !important;
+
+    &-wrapper {
+      padding: 0em !important;
+
+      &-item {
+        height: 23em !important;
+      }
+    }
+    &-position-absolute {
+      grid-auto-flow: row !important;
+      margin: 0 auto !important;
+      place-items: center !important;
+      text-align: center;
+
+    }
+  }
+}

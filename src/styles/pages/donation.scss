@@ -1,0 +1,46 @@
+.donation {
+
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  gap: 6em;
+  width: 60%;
+  height: 100vh;
+  margin: 0 auto;
+
+  &-image {
+    padding-top: 4em;
+    width: 40em;
+  }
+
+  &-content {
+    color: $color-white;
+
+    &>p {
+      font-weight: 600;
+      font-size: 1.6em;
+      line-height: 2.4em;
+      text-shadow: 0px 10px 60px rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .donation {
+    width: 90%;
+    font-size: 7px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .donation {
+    margin-top: 50px;
+    grid-auto-flow: row !important;
+
+
+    &-content {
+      text-align: center;
+    }
+  }
+}
