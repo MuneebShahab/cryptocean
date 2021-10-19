@@ -35,15 +35,23 @@
 
 @media only screen and (max-width: 768px) {
   .team {
-    width: 90%;
+    width: 90% !important;
     font-size: 7px;
   }
 
 }
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 450px) {
   .team {
     grid-auto-flow: row !important;
     align-items: start !important;
     text-align: center;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .team {
+    width: 950px; 
+    margin-top: 20em;
   }
 }

@@ -36,7 +36,7 @@
 @media only screen and (max-width: 768px) {
   .about {
     font-size: 7px;
-    width: 90%;
+    width: 90% !important;
     margin-top: 50px;
 
     // &-image {
@@ -50,7 +50,7 @@
     // }
   }
 }
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 450px) {
   .about {
     width: 100% !important;
     margin-top: 480px !important;
@@ -60,5 +60,11 @@
       text-align: center;
     }
 
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .about {
+    width: 950px;
+    margin-top: 10em;
   }
 }

@@ -1,5 +1,4 @@
 .donation {
-
   display: grid;
   grid-auto-flow: column;
   place-items: center;
@@ -16,7 +15,7 @@
   &-content {
     color: $color-white;
 
-    &>p {
+    & > p {
       font-weight: 600;
       font-size: 1.6em;
       line-height: 2.4em;
@@ -27,20 +26,25 @@
 
 @media only screen and (max-width: 768px) {
   .donation {
-    width: 90%;
+    width: 90% !important;
     font-size: 7px;
   }
-
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 450px) {
   .donation {
     margin-top: 50px;
     grid-auto-flow: row !important;
-
+    width: 100% !important;
 
     &-content {
       text-align: center;
     }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .donation {
+    width: 950px;
   }
 }

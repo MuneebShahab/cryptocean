@@ -1,9 +1,19 @@
 import React from "react";
 import SaleMapItem from "../components/SaleMapItem";
+import LightHouseAnimate from "../assets/final-lighthouse.svg";
+import WaveBoat from "../assets/CO-ICON_SHIP.png";
 
 const SailMap = () => {
   return (
     <section id="sailmap" className="sailmap">
+      <div className="sailmap-animate">
+        <div className="boat-animate">
+          <img src={WaveBoat} alt="" />
+        </div>
+        <div>
+          <img className="lighthouse_to" src={LightHouseAnimate} alt="" />
+        </div>
+      </div>
       <div className="sailmap-wrapper">
         <h2 className="heading-primary">Sail Map</h2>
         <p className="heading-primary--sub">

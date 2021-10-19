@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import LogoMain from "../assets/logo_main.svg";
 
 const Navigation = () => {
+const [toggle, setToggle] = useState(false);
+
   return (
     <nav className="navigation">
       <img className="navigation-logo" src={LogoMain} />
-      <ul>
+      <ul className="topnav" id="topbar">
         <li>Join</li>
         <li>
           <a href="#mintbox">Mintbox</a>
@@ -32,7 +34,7 @@ const Navigation = () => {
           <a href="#contactus">Contact Us</a>
         </li>
       </ul>
-      {/* <div className="for_flex_hide">
+      <div className="for_flex_hide">
         <button className="">
           <svg
             onClick={() => setToggle(!toggle)}
@@ -47,8 +49,9 @@ const Navigation = () => {
           </svg>
         </button>
       </div>
+      {toggle ? (
       <div className="for_mobile">
-        <ul>
+        <ul className="mobile_nav">
           <li>Join</li>
           <li>
             <a href="#mintbox">Mintbox</a>
@@ -75,10 +78,19 @@ const Navigation = () => {
             <a href="#contactus">Contact Us</a>
           </li>
         </ul>
-      </div> */}
+      </div>
+      ) : null}
       <button className="navigation-contactbtn">Contact Us</button>
     </nav>
   );
 };
-
+// class Foofoo extends Component {
+// myFunction(){
+//   var x = document.getElementById("myTopnav");
+//   if (x.className === "topnav") {
+//     x.style.display= "none";
+//   } else { x.style.display= "none";
+//   }
+// }
+// }
 export default Navigation;

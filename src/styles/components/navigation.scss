@@ -42,9 +42,16 @@
   }
 }
 .for_flex_hide {
-  display: flex;
+  display: none;
 }
-@media (min-width: 320px) and (max-width: 425px) {
+
+@media (min-width: 320px) and (max-width: 450px) {
+  .for_flex_hide {
+   display: block !important;
+  }
+  .topnav { 
+    display: none !important;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -63,9 +70,19 @@
       width: 7em;
     }
   }
+  .for_flex_hide {
+    display: none;
+  }
+
 }
 @media only screen and (max-width: 1024px) {
   .for_flex_hide {
     display: none;
+  }
+  .navigation {
+    padding: 3em 4em;
+    ul {
+      margin: 0;
+    }
   }
 }

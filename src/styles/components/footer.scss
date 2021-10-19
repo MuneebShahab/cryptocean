@@ -50,7 +50,7 @@
     &-wrapper {}
   }
 }
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 450px) {
   .footer {
 
     &-wrapper {
@@ -58,4 +58,11 @@
     }
   }
 
+}
+@media only screen and (max-width: 1024px) {
+  .footer {
+    &-wrapper {
+      padding: 2em 3em;
+    }
+  }
 }

@@ -3,8 +3,15 @@
   display: grid;
   place-items: center;
 
-  &-wrapper {
+  &-animate {
     width: 60%;
+    text-align: center;
+    position: relative;
+    top: 75px;
+  }
+
+  &-wrapper {
+    width: 55%;
     height: 70em;
     margin: 0 auto;
     border: 1px solid $color-white;
@@ -65,19 +72,135 @@
     }
   }
 }
+.lighthouse_to {
+
+  width: 1122px;
+  height: 150px;
+  margin-bottom: -10px  ;
+}
+
+.boat-animate {
+  text-align: left;
+  margin-bottom: -185px;
+}
+//  ANIMATION BOAT LIGHTHOUSE
+.boat-animate {
+  top: 40px;
+  position:absolute;
+  -webkit-animation:linear infinite;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 20s;
+  -moz-animation: linear infinite;
+  -moz-animation-name: run;
+  -moz-animation-duration: 20s;
+} 
+
+@keyframes run {
+  0% {
+    left:0;
+    -webkit-transform:rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+  }
+ 
+ 50% {
+    left:78%;
+    -webkit-transform:rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+ }
+ 
+ 51% {
+    -webkit-transform:rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+  }
+ 
+ 99% {
+    left:0;
+    -webkit-transform:rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+ }
+ 
+ 100% {
+    left:0;
+    -webkit-transform:rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+ }
+}
+
+@-webkit-keyframes run  {
+  0% {
+     left:0;
+     -webkit-transform:rotateY(0deg);
+  }
+  
+  50% {
+     left:82%;
+     -webkit-transform:rotateY(0deg);
+  }
+  
+  51% {
+     -webkit-transform:rotateY(180deg);
+  }
+  
+  99% {
+     left:0;
+     -webkit-transform:rotateY(180deg);
+  }
+  
+  100% {
+     left:0;
+     -webkit-transform:rotateY(0deg);
+  }
+
+}
+
+
+
+@media only screen and (max-width: 1440px) {
+  .sailmap {
+    &-animate {
+      top: 13px;
+      width: 55%;
+    }
+  }
+  .boat-animate {
+    top: 30px;
+  }
+}
+
+
+
+
+
 
 @media only screen and (max-width: 768px) {
   .sailmap {
     &-wrapper {
-      width: 90%;
-      font-size: 7px;
+      width: 90% !important;
+      font-size: 7px; 
+    }
+    &-animate {
+      width: 90% !important; 
+      top: 20px !important;
     }
   }
+  .boat-animate {
+    top: 22px;
+  }
 }
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 450px) {
+  .navigation{display: flex;
+  justify-content: space-around;
+  }
+  .navigation-logo {
+    width: 80px;
+}
   .sailmap {
     margin-top: 150px !important;
     
+    &-animate {
+      width: 100% !important;
+      top: 40px !important;
+    }
     &-wrapper {
       width: 100% !important;
       padding: 2em !important;
@@ -87,4 +210,49 @@
       grid-template-columns: auto !important;
     }
   }
+  .boat-animate {
+    width: 69px;
+    height: 69px;
+    top: 49px;
+  }
+  .boat-animate img {
+    width: 100%;
+  }
+}
+.lighthouse_to {
+  width: 100% !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sailmap {
+    &-wrapper {
+      width: 950px;
+    }
+    &-animate {
+      width: 950px;
+      top: 0px;
+    }
+  }
+}
+ul.mobile_nav {
+  max-height: 600px;
+  height: 200px;
+  display: block;
+  width: 150px;
+  transition:0.3s;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  background: radial-gradient(225.88% 225.88% at 50% 50%, rgba(11, 14, 39, 0.4) 0%, #0b0e27 42.28%);
+  width: 100%;
+  top: 70px;
+}
+
+
+
+ul.mobile_nav li {
+  padding: 5px;
+}
+.for_flex_hide{
+  text-align: center;
 }

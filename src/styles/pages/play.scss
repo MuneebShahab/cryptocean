@@ -35,15 +35,22 @@
 
 @media only screen and (max-width: 768px) {
   .play {
-    width: 90%;
+    width: 90%  !important;
     font-size: 7px;
   }
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 450px) {
   .play {
     grid-auto-flow: row !important;
     margin-top: 150px !important;
     text-align: center;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .play {
+    width: 950px;
   }
 }

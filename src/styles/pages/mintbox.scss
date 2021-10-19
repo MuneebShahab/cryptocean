@@ -123,7 +123,7 @@
     }
 
     &-box {
-      width: 90%;
+      width: 90% !important;
 
       .mintbox-clock {
         width: 50%;
@@ -131,7 +131,7 @@
     }
   }
 }
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 450px) {
   .mintbox {
     padding-top: 4em !important;
     padding: 0 !important;
@@ -163,4 +163,12 @@
       }
     }
   }
+}
+@media only screen and (max-width: 1024px) {
+  .mintbox {
+    &-box {
+      width: 950px;
+    }
+  }
+
 }
