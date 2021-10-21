@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 import About from "./pages/About";
@@ -11,6 +11,18 @@ import SailMap from "./pages/SailMap";
 import Team from "./pages/Team";
 
 const App = () => {
+  // useEffect(()=>{
+  //   var OSName="Unknown OS";
+  //   if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+  //   if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+  //   if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+  //   if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+  //   if(OSName==="MacOS"){
+  //   var abc=document.getElementsByClassName("sailmap-animate");
+  //   abc[0].style.top = '45px';
+  //   abc[0].style.width= "55%"
+  //   };
+  // },[])
   return (
     <>
       <Navigation />

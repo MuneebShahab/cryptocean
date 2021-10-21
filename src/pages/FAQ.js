@@ -23,7 +23,6 @@ const FAQ = () => {
           <FAQItem />
           <FAQItem />
           <FAQItem />
-          <FAQItem />
         </div>
       </div>
     </section>

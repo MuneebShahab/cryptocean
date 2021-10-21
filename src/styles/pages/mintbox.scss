@@ -1,6 +1,6 @@
 .mintbox {
-  height: 100vh;
-  margin-top: 490px;
+  // height: 100vh;
+  margin-top: 332px;
   position: relative;
 
   &-margin {
@@ -16,7 +16,7 @@
     // background-color: red;
     z-index: 99;
     position: absolute;
-    top: -650px;
+    top: -505px;
     left: 0;
   }
 
@@ -89,7 +89,7 @@
       margin: 4em 0;
 
       .mintbox-box-render {
-        width: 22em;
+        width: 30em;
       }
 
       .mintbox-box-controls {
@@ -98,6 +98,8 @@
         background: rgba(185, 250, 245, 0.2);
         display: grid;
         place-items: center;
+        padding: 35px;
+        
 
         &--heading {
           color: $color-purple;
@@ -110,6 +112,25 @@
           text-align: center;
           letter-spacing: 0.05em;
         }
+
+        &--counterInfo {
+          color: $color-white;
+          font-size: 1.5em;
+          font-weight: 100;
+          text-align: center;
+          letter-spacing: 0.05em;
+          padding-top: 1em;
+        }
+
+        &--totalEth{
+          color: $color-white;
+          font-size: 1.5em;
+          font-weight: 300;
+          text-align: center;
+          letter-spacing: 0.05em;
+          padding: 5px;
+          background: #00000069;
+        }
       }
     }
   }
@@ -118,7 +139,7 @@
 @media only screen and (max-width: 768px) {
   .mintbox {
     &-margin {
-      top: -680px;
+      // top: -680px;
       // background-color: red;
     }
 
@@ -131,12 +152,13 @@
     }
   }
 }
-@media (min-width: 320px) and (max-width: 450px) {
+@media (min-width: 300px) and (max-width: 450px) {
   .mintbox {
     padding-top: 4em !important;
     padding: 0 !important;
+    margin-top: 200px;
     &-margin {
-      top: -680px;
+      // top: -680px;
       // background-color: red;
     }
     h2 {
@@ -147,7 +169,7 @@
     }
 
     &-box {
-      width: 100% !important;
+      width: 90% !important;
       padding: 2em !important;
       padding-top: 4em !important;
       place-items: center !important;
@@ -160,8 +182,19 @@
       &-body {
         grid-template-columns: auto;
         width: 100% !important;
+
+        .mintbox-box-controls {
+          margin: 0 auto !important;
+        }
+        .mintbox-box-render {
+          width: 30em;
+          margin: 0 auto;
+        }
       }
     }
+  }
+  .tunnedBtn {
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 1024px) {

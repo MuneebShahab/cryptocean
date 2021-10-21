@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SaleMapItem from "../components/SaleMapItem";
 import LightHouseAnimate from "../assets/final-lighthouse.svg";
 import WaveBoat from "../assets/CO-ICON_SHIP.png";
@@ -6,13 +6,9 @@ import WaveBoat from "../assets/CO-ICON_SHIP.png";
 const SailMap = () => {
   return (
     <section id="sailmap" className="sailmap">
-      <div className="sailmap-animate">
-        <div className="boat-animate">
-          <img src={WaveBoat} alt="" />
-        </div>
-        <div>
-          <img className="lighthouse_to" src={LightHouseAnimate} alt="" />
-        </div>
+      <div className="sailmap-animation">
+        <img src={WaveBoat} alt="" className="boatToAnimate" />
+        <img src={LightHouseAnimate} alt="" className="animation-boat" />
       </div>
       <div className="sailmap-wrapper">
         <h2 className="heading-primary">Sail Map</h2>

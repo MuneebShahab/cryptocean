@@ -3,7 +3,7 @@
   border: 0.6px solid #B9FAF5;
   border-radius: 12px;
   padding: 1em 2.4em;
-  font-size: 1.6em;
+  font-size: 1.3em;
   background-color: $color-blue;
   box-shadow: 0px 0px 30px rgba(185, 250, 245, 0.25);
 }
@@ -23,14 +23,24 @@
 
 .tunned-btn {
   background-color: transparent;
-  border: 1px solid $color-purple;
+  border: 2px solid $color-purple;
   border-radius: 3em;
-  padding: 1.2em 1.2em;
+  padding: 1em 2.2em;
+  box-shadow:
+    /* White glow */
+    inset 0 0 1px #fff,
+    inset 0 0 8px #fff,
+     0 0 4px #fff;
 
   &-text {
-    font-size: 1.4em;
+    font-size: 1.5em;
     color: $color-purple;
-    text-shadow: 0px 0px 30px rgba($color-purple, 0.8);
+    text-shadow:
+    /* White glow */
+    0 0 1px #fff,
+    0 0 8px #fff,
+    0 0 16px #fff;
+  
   }
 }
 
@@ -43,6 +53,6 @@
 }
 @media only screen and (max-width: 1024px) {
   .discord-btn {
-    padding: 0.5em 2.4em;
+    padding: 0.5em 2.4em; 
   }
 }

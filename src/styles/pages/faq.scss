@@ -1,8 +1,9 @@
 .faq {
 
-  height: 100vh;
   display: grid;
   place-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 
   &-wrapper {
     width: 60%;
@@ -14,10 +15,15 @@
 
     &-item {
       width: 100%;
-      height: 31em;
-      overflow-y: scroll;
+      height: 100%;
       margin: 1em 0;
+      position: relative;
     }
+  
+
+  }
+  &-item:hover + .faq-item-description {
+    display: block;
   }
 
 
@@ -41,9 +47,7 @@
     padding: 1.2em;
     margin: 1.4em 0em;
 
-    &:hover+.faq-item-description {
-      display: block;
-    }
+
 
     &-text {
       color: $color-white;
@@ -64,6 +68,8 @@
       border-radius: $border-radius;
       padding: 2em;
       display: none;
+      position: absolute;
+      z-index: 1;
     }
 
     span {
@@ -84,6 +90,18 @@
     display: block;
   }
 }
+.faq-icon {
+  transform-origin: left top;
+  animation: scale 3s ease-in-out infinite alternate;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .faq {
@@ -94,16 +112,17 @@
     }
   }
 }
-@media (min-width: 320px) and (max-width: 450px) {
+@media (min-width: 300px) and (max-width: 450px) {
   .faq {
     margin-top: 150px !important;
 
     &-wrapper {
       padding: 0em !important;
-      width: 100% !important;
+      width: 90% !important;
+      margin: 0 auto;
 
       &-item {
-        height: 23em !important;
+        padding: 1em;
       }
     }
     &-position-absolute {
@@ -114,15 +133,16 @@
 
     }
   }
+  .faq-item {
+    padding: 1.2em 2em !important;
+    padding-right: 5em !important;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .faq {
     &-wrapper {
       width: 950px;
 
-      &-item {
-        height: 31em;
-      }
     }
   }
 }

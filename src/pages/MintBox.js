@@ -1,5 +1,6 @@
 import React from "react";
-import render_1 from "../assets/render_1.svg";
+import render_1 from "../assets/marmaid_full.png";
+import Counter from "../components/Counter/Counter";
 // import minusBtn from "../assets/minus.png";
 // import addBtn from "../assets/add.png";
 
@@ -46,17 +47,28 @@ const MintBox = () => {
             <p className="mintbox-box-controls--units">0.1 ETH</p>
             <div>
               {/* <img src={minusBtn} alt="" /> */}
-              <p>1</p>
+              <Counter />
+              <div className="mintbox-box-controls--counterInfo">
+                25max / Transaction
+              </div>
               {/* <img src={addBtn} alt="" /> */}
+              <div style={{ display: "flex", justifyContent: "center",alignItems:"flex-end",marginTop:20,marginBottom:10 }}>
+                <div className="mintbox-box-controls--totalEth" >
+                  <div>0.1 ETH</div>
+                </div>
+              </div>
             </div>
             <button className="mint-btn">
               <p>Mint</p>
             </button>
           </div>
         </div>
+        <div className="tunnedBtn" style={{display:"flex",width:"100%"}}>
         <button className="tunned-btn">
-          <p className="tunned-btn-text">STAY TUNNED</p>
+          <p className="tunned-btn-text">STAY </p>
+          <p className="tunned-btn-text">TUNNED</p>
         </button>
+        </div>
       </div>
     </section>
   );

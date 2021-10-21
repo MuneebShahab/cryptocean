@@ -5,8 +5,9 @@
   place-items: center;
   gap: 6em;
   width: 60%;
-  height: 100vh;
   margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
 
   &-image {
     padding-top: 4em;
@@ -32,12 +33,25 @@
     }
   }
 }
+.about-image {
+  -webkit-animation: action 3s infinite  alternate;
+  animation: action 3s infinite  alternate;
+}
+@-webkit-keyframes action {
+  0% { transform: translateY(10px); }
+  100% { transform: translateY(-50px); }
+}
+@keyframes action {
+  0% { transform: translateY(10px); }
+  100% { transform: translateY(-50px); }
+}
 
 @media only screen and (max-width: 768px) {
   .about {
     font-size: 7px;
     width: 90% !important;
     margin-top: 50px;
+    height: auto;
 
     // &-image {
     //   width: 30em;
@@ -50,10 +64,10 @@
     // }
   }
 }
-@media (min-width: 320px) and (max-width: 450px) {
+@media (min-width: 300px) and (max-width: 450px) {
   .about {
-    width: 100% !important;
-    margin-top: 480px !important;
+    width: 90% !important;
+
     grid-auto-flow: row !important;
 
     &-content {

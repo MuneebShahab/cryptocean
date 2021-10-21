@@ -17,8 +17,8 @@
   &-heading {
     color: $color-white;
     font-weight: 900;
-    font-size: 9.5em;
-    line-height: 142px;
+    font-size: 7em;
+    line-height: 100px;
     text-shadow: 0px 10px 60px rgba(255, 255, 255, 0.4);
     position: relative;
     z-index: 1;
@@ -42,7 +42,7 @@
     font-size: 2em;
     line-height: 30px;
     text-shadow: 0px 10px 60px rgba(255, 255, 255, 0.4);
-    margin-bottom: 2em;
+    margin-bottom: 1.2em;
   }
 
   &-render {
@@ -98,7 +98,7 @@
   #scene-wrapper-5 {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 90px;
     z-index: 3;
     width: 30%;
   }
@@ -145,12 +145,13 @@
 
 
 
-@media only screen and (min-width: 320px) and (max-width: 450px){
+@media only screen and (min-width: 300px) and (max-width: 450px){
   .header {
 
     &-content {
       top: 14% !important; 
       width: 100%  !important;
+      text-align: center;
     }
 
     &-heading {
@@ -160,7 +161,7 @@
 
     &-intro {
       font-size: 1em !important;
-      line-height: 28px !important;
+      line-height: 18px !important;
     }
     &-content {
       width: auto !important;
@@ -183,14 +184,22 @@
     }
 
     #scene-wrapper-5 {
-      width: 50%;
-      bottom: 90px !important;
+      width: 50% !important;
+      bottom: 195px !important;
 
     }
-
+  }
+  .discord-btn {
+    padding: 0.2em 1.4em;
+}
+}
+@media only screen and (max-width: 320px) {
+  .header {
+    #scene-wrapper-5 {
+      width: 60% !important;
+    }
   }
 }
-
 @media only screen and (max-width: 768px) {
   .header {
 
@@ -224,8 +233,9 @@
     }
 
     #scene-wrapper-5 {
-      width: 50%;
-      bottom: 50px;
+      width: 35%;
+      bottom: 130px;
+      right: -12px;
     }
 
   }
@@ -249,6 +259,10 @@
     line-height: 26px;
     margin-bottom: 1em;
   }
-
+  #scene-wrapper-5 {
+    width: 35%;
+    bottom: 130px;
+    right: -12px;
+  }
 }
 }

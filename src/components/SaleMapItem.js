@@ -9,8 +9,10 @@ const SaleMapItem = ({ year, month, line1, line2 }) => {
       </div>
       <div></div>
       <div>
-        <p className="sailmap-item-description--1">{line1}</p>
-        <p className="sailmap-item-description--2">{line2}</p>
+        <ul>
+          <li className="sailmap-item-description--1">{line1}</li>
+          <li className="sailmap-item-description--2">{line2}</li>
+        </ul>
       </div>
     </div>
   );
