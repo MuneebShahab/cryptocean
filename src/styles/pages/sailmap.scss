@@ -2,11 +2,11 @@
   // height: 100vh;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   margin-top: 150px;
 
   &-animation {
-    width: 55%;
+    width: 60%;
     // background: red;
     display: flex;
     position: relative;
@@ -14,15 +14,16 @@
   }
 
   &-wrapper {
-    width: 55%;
-    height: 70em;
+    width: 60%;
+    min-height: 80em;
     margin: 0 auto;
     border: 1px solid $color-white;
     border-radius: $border-radius;
-    display: grid;
-    place-items: center;
-    padding: 5em 1em;
-    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5em 2em;
+    //
   }
   &-item:hover {
     background-color: #c9b1f536;
@@ -35,7 +36,7 @@
     border-radius: $border-radius;
     background: rgba($color-neon, 0.2);
     padding: 1em 2em;
-    margin: 1em 0em;
+    margin: 2em 0em;
 
     & > div:nth-of-type(1) {
       display: grid;
@@ -82,6 +83,65 @@
     position: absolute;
   }
 }
+// .scrollWrapper::-webkit-scrollbar-thumb:hover {
+//   background: #b9faf5;
+// } 
+// .scrollWrapper::-webkit-scrollbar-track:hover {
+//   border: 1px solid #b9faf5;
+// }
+.scrollWrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.scrollWrapper::-webkit-scrollbar-track {
+  background: transparent;
+  border: 1px solid #b9faf5;
+  border-radius: 12px;
+}
+
+/* Handle */
+.scrollWrapper::-webkit-scrollbar-thumb {
+  background: #b9faf5;
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+.discordBtn {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+}	
+// img.nonHov:hover + img.forHov {
+//   display: block;
+// }
+
+img.forHov {
+  display: block;
+  // transition: 0.3s ease-in-out;
+}
+// img.nonHov:hover + img.forHov{
+//   display: block;
+// }
+
+img.nonHov{
+  display: block;
+}
+
+// .sailmap-wrapper {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+// }
+
+.scrollWrapper {
+  width: 100%;
+  overflow-y: scroll;
+  height: 48em;
+  padding: 0em 5em;
+}
 .lighthouse_to {
   width: 1122px;
   height: 150px;
@@ -93,46 +153,45 @@
   margin-bottom: -185px;
 }
 //  ANIMATION BOAT LIGHTHOUSE
-.boatToAnimate {
-  -webkit-animation: linear infinite;
-  -webkit-animation-name: run;
-  -webkit-animation-duration: 20s;
-  -moz-animation: linear infinite;
-  -moz-animation-name: run;
-  -moz-animation-duration: 10s;
-}
+// .boatToAnimate {
+//   -webkit-animation: linear infinite;
+//   -webkit-animation-name: run;
+//   -webkit-animation-duration: 20s;
+//   -moz-animation: linear infinite;
+//   -moz-animation-name: run;
+//   -moz-animation-duration: 10s;
+// }
 
-@keyframes run {
-  0% {
-    left: 0;
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-  }
+// @keyframes run {
+//   0% {
+//     left: 0;
+//     -webkit-transform: rotateY(0deg);
+//     -moz-transform: rotateY(0deg);
+//   }
 
-  50% {
-    left: 78%;
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-  }
+//   50% {
+//     left: 78%;
+//     -webkit-transform: rotateY(0deg);
+//     -moz-transform: rotateY(0deg);
+//   }
 
-  51% {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-  }
+//   51% {
+//     -webkit-transform: rotateY(180deg);
+//     -moz-transform: rotateY(180deg);
+//   }
 
-  99% {
-    left: 0;
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-  }
+//   99% {
+//     left: 0;
+//     -webkit-transform: rotateY(180deg);
+//     -moz-transform: rotateY(180deg);
+//   }
 
-  100% {
-    left: 0;
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-  }
-}
-
+//   100% {
+//     left: 0;
+//     -webkit-transform: rotateY(0deg);
+//     -moz-transform: rotateY(0deg);
+//   }
+// }
 
 @media only screen and (max-width: 768px) {
   .sailmap {
@@ -146,7 +205,6 @@
   }
 }
 @media (min-width: 300px) and (max-width: 450px) {
-
   .sailmap {
     margin-top: 150px !important;
     &-wrapper {
@@ -166,8 +224,6 @@
     width: 60px;
   }
 }
-
-
 
 @media only screen and (max-width: 1024px) {
   .sailmap {

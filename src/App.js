@@ -9,6 +9,7 @@ import MintBox from "./pages/MintBox";
 import PlayToEarn from "./pages/PlayToEarn";
 import SailMap from "./pages/SailMap";
 import Team from "./pages/Team";
+import $ from 'jquery'
 
 const App = () => {
   // useEffect(()=>{

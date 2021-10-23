@@ -22,9 +22,9 @@
   
 
   }
-  &-item:hover + .faq-item-description {
-    display: block;
-  }
+  // &-item:hover + .faq-item-description {
+  //   display: block;
+  // }
 
 
   &-position-absolute {
@@ -67,7 +67,7 @@
       border: 1px solid $color-neon;
       border-radius: $border-radius;
       padding: 2em;
-      display: none;
+      display: block;
       position: absolute;
       z-index: 1;
     }

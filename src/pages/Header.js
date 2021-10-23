@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import render_1 from "../assets/render_1.svg";
+import render_1 from "../assets/murmaid_1.png";
 import wave_1 from "../assets/wave_1.svg";
 import wave_2 from "../assets/wave_2.svg";
 import wave_3 from "../assets/wave_3.svg";

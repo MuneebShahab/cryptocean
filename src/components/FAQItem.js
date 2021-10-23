@@ -2,6 +2,20 @@ import React from "react";
 import Expend from "../assets/expend.png";
 
 const FAQItem = ({ text }) => {
+  // const targetDiv = document.getElementsByClassName("faq-item-description");
+  // const btn = document.getElementsByClassName("faq-item");
+
+  const faqItemClick = () => {
+    const targetDiv = document.getElementsByClassName("faq-item-description");
+    const btn = document.getElementsByClassName("faq-item");
+    // console.log(targetDiv);
+    if (this.targetDiv.style.display == "none") {
+      this.targetDiv.style.display = "block";
+    } else if (this.targetDiv.style.display == "block") {
+      this.targetDiv.style.display = "none";
+    }
+  };
+
   return (
     <>
       <div className="faq-item">
